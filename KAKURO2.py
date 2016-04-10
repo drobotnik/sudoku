@@ -8,13 +8,23 @@ def pprint(thing):
 
 class Kakuro(object):
     def __init__(self, info):
+        self.rules = {y: {x: [] for x in range(info['size'])} for y in range(info['size'])}
         if type(info) is int:
             self.size = info
             self.array = [['' for x in range(info)] for y in range(info)]
         elif type(info) is list:
             self.size = len(info)
             self.array = info
-        self.rules = {y: {x: [] for x in range(info)} for y in range(info)}
+
+        elif type(info) is dict:
+            print('its a dict')
+            self.size = info['size']
+            self.array = [['' for x in range(self.size)] for y in range(self.size)]
+            self.add_rules(info['rules'])
+            for position in info['positions']:
+                self.update_position(*position)
+        self.my_range = range(1, self.size + 1)
+
 
     def __str__(self):
         out = ''
@@ -53,9 +63,9 @@ class Kakuro(object):
             comparison_val = self.array[comparison_y][comparison_x]
             if comparison_val:
                 if comparison == '>':
-                    numbers = [n for n in range(1, self.size + 1) if n < comparison_val]
+                    numbers = [n for n in self.my_range if n < comparison_val]
                 else:
-                    numbers = [n for n in range(1, self.size + 1) if n > comparison_val]
+                    numbers = [n for n in self.my_range if n > comparison_val]
                 impossibles.update(numbers)
 
         return impossibles
@@ -74,7 +84,7 @@ class Kakuro(object):
         rule_limits = self.check_rule(position)
         impossibles.update(rule_limits)
         options = []
-        for n in range(1, self.size + 1):
+        for n in self.my_range:
             if n not in impossibles:
                 options += [n]
         return options
@@ -99,38 +109,33 @@ class Kakuro(object):
         transposed = list(zip(*normal))
         for view in [normal, transposed]:
             for row in view:
-                for n in range(1, self.size + 1):
+                for n in self.my_range:
                     if n not in row:
                         return False
         return True
 
 
+kakuro_1 = {
+    'size': 5,
+    'positions': [
+        (1, 1, 4),
+        (4, 0, 4),
+        (0, 0, 1)
+    ],
+    'rules': [
+        '00<01',
+        '01<11',
+        '13<14',
+        '22>32',
+        '32>33',
+        '34>44',
+        '40>41',
+        '43<44'
+    ]
+}
 
-starter = [
-    [1, 2, 3, 0],
-    [2, 3, 4, 1],
-    [3, 4, 1, 2],
-    [4, 1, 2, 3]
-]
+array = Kakuro(kakuro_1)
 
-array = Kakuro(5)
-
-array.update_position(1, 1, 4)
-array.update_position(4, 0, 4)
-
-
-rules = [
-    '00<01',
-    '01<11',
-    '13<14',
-    '22>32',
-    '32>33',
-    '34>44',
-    '40>41',
-    '43<44'
-]
-
-array.add_rules(rules)
 
 
 def solve(my_array):
@@ -149,11 +154,7 @@ def solve(my_array):
                 return possible
 
 
-
-
 ans = solve(array)
 
 print('ans..')
 print(ans)
-
-
