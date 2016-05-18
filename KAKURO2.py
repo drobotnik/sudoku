@@ -44,7 +44,7 @@ class Kakuro2(object):
         self.array[position] = value
         # update rules
         print('about to check rules for {}'.format(position))
-        #self.check_rules(position)
+        self.check_rules(position)
         print(self)
 
         return True
@@ -241,8 +241,6 @@ kakuro2_1 = {
 
 array = Kakuro2(kakuro2_1)
 
-for key, val in array.array.items():
-    print(key, val)
 # print('**')
 print('***')
 # for key, val in array.array.items():

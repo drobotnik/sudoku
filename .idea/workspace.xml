@@ -21,25 +21,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="KAKURO2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KAKURO2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KAKURO2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4316877">
-              <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
                 <element signature="e#192#715#0" expanded="false" />
-                <element signature="e#3666#4125#0" expanded="false" />
-                <element signature="e#4172#4227#0" expanded="false" />
-                <element signature="e#4256#7596#0" expanded="false" />
-                <element signature="e#4837#4859#0" expanded="false" />
-                <element signature="e#5582#6136#0" expanded="false" />
-                <element signature="e#6199#6358#0" expanded="false" />
-                <element signature="e#6405#6785#0" expanded="false" />
-                <element signature="e#6829#6949#0" expanded="false" />
-                <element signature="e#6990#7294#0" expanded="false" />
-                <element signature="e#7328#7596#0" expanded="false" />
+                <element signature="e#3665#4124#0" expanded="false" />
+                <element signature="e#4171#4226#0" expanded="false" />
+                <element signature="e#4255#7595#0" expanded="false" />
+                <element signature="e#4836#4858#0" expanded="false" />
+                <element signature="e#5581#6135#0" expanded="false" />
+                <element signature="e#6198#6357#0" expanded="false" />
+                <element signature="e#6404#6784#0" expanded="false" />
+                <element signature="e#6828#6948#0" expanded="false" />
+                <element signature="e#6989#7293#0" expanded="false" />
+                <element signature="e#7327#7595#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signpost.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/signpost.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+              <folding>
+                <element signature="e#319#385#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mastermind.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mastermind.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.67730904">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="itertools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-506178066/itertools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="178" column="8" selection-start-line="178" selection-start-column="8" selection-end-line="178" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blah.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blah.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,6 +115,9 @@
       <list>
         <option value="$PROJECT_DIR$/kakuro.py" />
         <option value="$PROJECT_DIR$/KAKURO2.py" />
+        <option value="$PROJECT_DIR$/signpost.py" />
+        <option value="$PROJECT_DIR$/blah.py" />
+        <option value="$PROJECT_DIR$/mastermind.py" />
       </list>
     </option>
   </component>
@@ -91,7 +138,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -104,14 +151,51 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sudoku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sudoku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sudoku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GitHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sudoku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="RunManager" selected="Python.KAKURO2">
+  <component name="RunManager" selected="Python.mastermind">
     <configuration default="false" name="kakuro" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -142,6 +226,57 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="sudoku" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KAKURO2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="signpost" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sudoku" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/signpost.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="blah" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sudoku" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blah.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="mastermind" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sudoku" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mastermind.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -268,14 +403,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.kakuro" />
       <item index="1" class="java.lang.String" itemvalue="Python.KAKURO2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.signpost" />
+      <item index="3" class="java.lang.String" itemvalue="Python.blah" />
+      <item index="4" class="java.lang.String" itemvalue="Python.mastermind" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.KAKURO2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.kakuro" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.mastermind" />
+        <item index="1" class="java.lang.String" itemvalue="Python.blah" />
+        <item index="2" class="java.lang.String" itemvalue="Python.signpost" />
+        <item index="3" class="java.lang.String" itemvalue="Python.KAKURO2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.kakuro" />
       </list>
     </recent_temporary>
   </component>
@@ -296,12 +437,12 @@
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25111774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14766082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41533548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4115016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -328,7 +469,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -336,20 +477,134 @@
     <entry file="file://$PROJECT_DIR$/KAKURO2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signpost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding>
+            <element signature="e#319#385#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mastermind.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-506178066/itertools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="178" column="8" selection-start-line="178" selection-start-column="8" selection-end-line="178" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blah.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-506178066/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2759" column="65" selection-start-line="2759" selection-start-column="59" selection-end-line="2759" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KAKURO2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#192#715#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signpost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#319#385#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-506178066/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2759" column="65" selection-start-line="2759" selection-start-column="59" selection-end-line="2759" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KAKURO2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#192#715#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signpost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#319#385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -369,16 +624,74 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-506178066/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2759" column="65" selection-start-line="2759" selection-start-column="59" selection-end-line="2759" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KAKURO2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#192#715#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-506178066/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2759" column="65" selection-start-line="2759" selection-start-column="59" selection-end-line="2759" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KAKURO2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#192#715#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -390,16 +703,16 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -411,16 +724,16 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -432,16 +745,16 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -453,16 +766,16 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -474,16 +787,16 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -495,16 +808,16 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -533,21 +846,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KAKURO2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4316877">
-          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <element signature="e#192#715#0" expanded="false" />
-            <element signature="e#3666#4125#0" expanded="false" />
-            <element signature="e#4172#4227#0" expanded="false" />
-            <element signature="e#4256#7596#0" expanded="false" />
-            <element signature="e#4837#4859#0" expanded="false" />
-            <element signature="e#5582#6136#0" expanded="false" />
-            <element signature="e#6199#6358#0" expanded="false" />
-            <element signature="e#6405#6785#0" expanded="false" />
-            <element signature="e#6829#6949#0" expanded="false" />
-            <element signature="e#6990#7294#0" expanded="false" />
-            <element signature="e#7328#7596#0" expanded="false" />
+            <element signature="e#3665#4124#0" expanded="false" />
+            <element signature="e#4171#4226#0" expanded="false" />
+            <element signature="e#4255#7595#0" expanded="false" />
+            <element signature="e#4836#4858#0" expanded="false" />
+            <element signature="e#5581#6135#0" expanded="false" />
+            <element signature="e#6198#6357#0" expanded="false" />
+            <element signature="e#6404#6784#0" expanded="false" />
+            <element signature="e#6828#6948#0" expanded="false" />
+            <element signature="e#6989#7293#0" expanded="false" />
+            <element signature="e#7327#7595#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blah.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signpost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding>
+            <element signature="e#319#385#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-506178066/itertools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="178" column="8" selection-start-line="178" selection-start-column="8" selection-end-line="178" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mastermind.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67730904">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
