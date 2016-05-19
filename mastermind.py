@@ -1,6 +1,10 @@
 from itertools import product, permutations
 from copy import copy
 
+"""
+https://arxiv.org/pdf/1305.1010.pdf
+"""
+
 
 def pprint(iterable):
     for _ in iterable:
@@ -31,8 +35,8 @@ class Mastermind(object):
         self.secret = secret
         self.possible_opts = product(range(num_colours), repeat=num_pegs) if duplicates else permutations(range(num_colours), num_pegs)
         self.num_colours = num_colours
-        self.guesses = []
         self.num_pegs = num_pegs
+        self.guesses = []
 
     def make_guess(self, guess):
         response = self.secret.give_guess_response(guess)
@@ -51,6 +55,14 @@ class Mastermind(object):
     def get_next_guess(self):
         if self.strategy == 0:
             return next(self.possible_opts)
+        elif self.strategy == 1:
+            """
+            For each possible guess, that is, any unused code of the 1296 not just those in S, 
+            calculate how many possibilities in S would be eliminated for each possible colored/white peg score. 
+            The score of a guess is the maximum number of possibilities it might eliminate from S. 
+            From the set of guesses with the minimum score select one as the next guess, choosing a member of S whenever possible. 
+            """
+            pass
         else:
             raise Exception("Didn't enter a valid strategy")
 
@@ -78,7 +90,8 @@ class Secret(object):
 
 
 strategies = {
-    'naive': 0
+    'naive': 0,
+    'knuth': 1
 }
 
 
