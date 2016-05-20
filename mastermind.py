@@ -30,7 +30,7 @@ def check(secret, guess):
 
 
 class Mastermind(object):
-    def __init__(self, secret, num_colours=6, num_pegs=4, strategy=0, duplicates=True):
+    def __init__(self, secret, num_colours=6, num_pegs=4, strategy=1, duplicates=True):
         if not duplicates:
             assert num_pegs <= num_colours
         self.strategy = strategy
@@ -39,37 +39,47 @@ class Mastermind(object):
         self.num_colours = num_colours
         self.num_pegs = num_pegs
         self.guesses = []
+        if strategy == 1:
+            self.remaining_opts = list(product(range(num_colours), repeat=num_pegs))
+            self.possible_opts = list(product(range(num_colours), repeat=num_pegs))
+            self.knuth_key = lambda test_guess: max(Counter(check(code, test_guess) for code in self.remaining_opts).values())
 
     def make_guess(self, guess):
         response = self.secret.give_guess_response(guess)
         self.guesses += [(guess, response)]
-        # print('Making guess: {}, Response: {}'.format(guess, response))
+        print('Making guess: {}, Response: {}'.format(guess, response))
         return guess, response
 
     def test_possibility(self, possibility):
         for wrong_guess, wrong_result in self.guesses:
             hypothetical_result = check(possibility, wrong_guess)
-            # print('old guess: {}, res:{}, poss: {}, hypo:{}'.format(wrong_guess, wrong_result, possibility, hypothetical_result))
             if hypothetical_result != wrong_result:
                 return False
         return True
 
     def get_next_guess(self):
         if self.strategy == 0:
-            a = next(self.possible_opts)
-            while not self.test_possibility(a):
-                a = next(self.possible_opts)
-            return a
+            next_guess = next(self.possible_opts)
+            while not self.test_possibility(next_guess):
+                next_guess = next(self.possible_opts)
+
         elif self.strategy == 1:
-            """
-            For each possible guess, that is, any unused code of the 1296 not just those in S, 
-            calculate how many possibilities in S would be eliminated for each possible colored/white peg score. 
-            The score of a guess is the maximum number of possibilities it might eliminate from S. 
-            From the set of guesses with the minimum score select one as the next guess, choosing a member of S whenever possible. 
-            """
-            pass
+            last_guess, last_response = self.guesses[-1]
+            filtered_codes = []  # c for c in codes if check(guess, c) == feedback]
+            for c in self.remaining_opts:  # for each remaining possible code
+                if check(c, last_guess) == last_response:  # Does that code match what we learnt from the last guess?
+                    filtered_codes += [c]  # If so, add it to the list of remaining possible codes
+            self.remaining_opts = filtered_codes  # Set codes to only be the remaining possibilities
+
+            if len(self.remaining_opts) == 1:
+                next_guess = self.remaining_opts[0]
+            else:
+                next_guess = min(self.possible_opts, key=self.knuth_key)  # Find the code which would give you the most unambiguous response in the worst case
         else:
-            raise Exception("Didn't enter a valid strategy")
+            next_guess = next(self.possible_opts)
+
+        return next_guess
+
 
     def run(self):
         chosen_guess = [int(x >= self.num_pegs / 2) for x in range(self.num_pegs)]
@@ -79,9 +89,6 @@ class Mastermind(object):
                 return option
             chosen_guess = self.get_next_guess()
             option, response = self.make_guess(chosen_guess)
-
-
-
 
 
 class Secret(object):
@@ -99,7 +106,8 @@ class Secret(object):
 
 strategies = {
     'naive': 0,
-    'knuth': 1
+    'knuth': 1,
+    'brute_force': 2
 }
 
 
@@ -107,11 +115,11 @@ def single_test(code, num_colours=6, num_pegs=4, strategy=0, duplicates=True):
     s = Secret(code, num_colours=num_colours, num_pegs=num_pegs, duplicates=duplicates)
     m = Mastermind(s, num_colours=num_colours, num_pegs=num_pegs, strategy=strategy, duplicates=duplicates)
     m.run()
-    pprint(m.guesses)
+    # pprint(m.guesses)
     print("Num Guesses: {}".format(len(m.guesses)))
 
 
-single_test([0,0,0,1,1], num_pegs=5)
+single_test([5, 1, 0, 3], num_colours=6, num_pegs=4, strategy=2)
 
 
 def test_all_combinations(colours=6, pegs=4, duplicates=True):
@@ -138,9 +146,6 @@ def test_all_combinations(colours=6, pegs=4, duplicates=True):
 
 
 ALL_CODES = list(product(range(6), repeat=4))
-
-
-
 
 
 def knuth(secret):
