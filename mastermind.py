@@ -1,5 +1,6 @@
 from itertools import product, permutations
 from copy import copy
+from collections import Counter
 
 """
 https://arxiv.org/pdf/1305.1010.pdf
@@ -13,6 +14,7 @@ def pprint(iterable):
 
 def check(secret, guess):
     # TODO get rid of this turning a copy into a list
+    # TODO look at using Counter() to replace this logic
     secret_copy = list(copy(secret))
     zipped_positions = zip(secret, guess)
     black_pegs = 0
@@ -54,7 +56,10 @@ class Mastermind(object):
 
     def get_next_guess(self):
         if self.strategy == 0:
-            return next(self.possible_opts)
+            a = next(self.possible_opts)
+            while not self.test_possibility(a):
+                a = next(self.possible_opts)
+            return a
         elif self.strategy == 1:
             """
             For each possible guess, that is, any unused code of the 1296 not just those in S, 
@@ -67,26 +72,29 @@ class Mastermind(object):
             raise Exception("Didn't enter a valid strategy")
 
     def run(self):
-        starting_guess = [int(x >= self.num_pegs / 2) for x in range(self.num_pegs)]
-        self.make_guess(starting_guess)
+        chosen_guess = [int(x >= self.num_pegs / 2) for x in range(self.num_pegs)]
+        option, response = self.make_guess(chosen_guess)
         while True:
-            option = self.get_next_guess()
-            if self.test_possibility(option):
-                _, response = self.make_guess(option)
-                if response == (self.num_pegs, 0):
-                    return option
+            if response == (self.num_pegs, 0):
+                return option
+            chosen_guess = self.get_next_guess()
+            option, response = self.make_guess(chosen_guess)
+
 
 
 
 
 class Secret(object):
-    def __init__(self, secret):
+    def __init__(self, secret, num_colours=6, num_pegs=4, duplicates=True):
+        assert max(secret) < num_colours, "Peg selected too high"
+        assert min(secret) >= 0, "Peg selected below 0"
+        assert len(secret) == num_pegs, "Not enough colours picked"
+        if not duplicates:
+            assert len(secret) == len(set(secret)), "There are duplicated numbers when duplicates are set to false"
         self.secret = secret
 
     def give_guess_response(self, guess):
         return check(self.secret, guess)
-
-
 
 
 strategies = {
@@ -95,32 +103,89 @@ strategies = {
 }
 
 
-def single_test(code):
-    s = Secret(code)
-    m = Mastermind(s)
-    print(m.run())
-    print(len(m.guesses))
+def single_test(code, num_colours=6, num_pegs=4, strategy=0, duplicates=True):
+    s = Secret(code, num_colours=num_colours, num_pegs=num_pegs, duplicates=duplicates)
+    m = Mastermind(s, num_colours=num_colours, num_pegs=num_pegs, strategy=strategy, duplicates=duplicates)
+    m.run()
     pprint(m.guesses)
+    print("Num Guesses: {}".format(len(m.guesses)))
+
+
+single_test([0,0,0,1,1], num_pegs=5)
 
 
 def test_all_combinations(colours=6, pegs=4, duplicates=True):
-    dist = {}
     all_secrets = product(range(colours), repeat=pegs) if duplicates else permutations(range(colours), pegs)
+    guess_count = []
     for test_secret in all_secrets:
-        # print(test_secret)
         s = Secret(test_secret)
         m = Mastermind(s, colours, pegs, 0, duplicates)
         m.run()
         num_guesses = len(m.guesses)
-        if num_guesses in dist:
-            dist[num_guesses] += 1
-        else:
-            dist[num_guesses] = 1
+        guess_count += [num_guesses]
 
-    for guess_count, num in dist.items():
-        print(guess_count, num)
+    dist = Counter(guess_count)
+    # av = 0
+    # for x, y in dist.items():
+    #     av += x * y
+    # av = av / sum(dist.values())
+    # print('Average: {}'.format(av))
 
     return dist
 
 
-test_all_combinations(duplicates=True)
+# test_all_combinations(pegs=4, duplicates=True)
+
+
+ALL_CODES = list(product(range(6), repeat=4))
+
+
+
+
+
+def knuth(secret):
+    """Run Knuth's 5-guess algorithm on the given secret."""
+    assert(secret in ALL_CODES)
+    codes = ALL_CODES  # Instantiate codes to be all possible codes
+    key = lambda test_guess: max(Counter(check(code, test_guess) for code in codes).values())
+    """
+    Key explanation:
+    For your test code
+    check that to all the remaining possible secrets
+    see how many of the same type of responses you would get for that code against all possible secrets.
+    The higher the number, the worse it is as that will be more ambiguous.
+    This is because it could be many different secrets which would give you that response from check() given that code.
+    Find the highest value from these occurances (worst case).
+    That is the score for that code.
+    ie. If you got that response, how many different secrets would have given you that code
+    """
+    guess = (0, 0, 1, 1)
+    guess_count = 0
+    while True:
+        feedback = check(secret, guess)
+        guess_count += 1
+        print("Guess {}: feedback {}".format(guess, feedback))
+        if guess == secret:
+            return guess_count
+
+        filtered_codes = [] # c for c in codes if check(guess, c) == feedback]
+        for c in codes:  # for each remaining possible code
+            if check(c, guess) == feedback: # Does that code match what we learnt from the last guess?
+                filtered_codes += [c]  # If so, add it to the list of remaining possible codes
+        codes = filtered_codes  # Set codes to only be the remaining possibilities
+
+        if len(codes) == 1:
+            guess = codes[0]
+        else:
+            guess = min(ALL_CODES, key=key)  # Find the code which would give you the most unambiguous response in the worst case
+
+
+# print(knuth((0, 0, 0, 0)))
+#
+# results = []
+# for secret in product(range(6), repeat=4):
+#     count = knuth(secret)
+#     print(count)
+#     results += [count]
+#
+# print(Counter(results))
