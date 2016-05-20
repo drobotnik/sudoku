@@ -46,7 +46,7 @@ class Mastermind(object):
     def make_guess(self, guess):
         response = self.secret.give_guess_response(guess)
         self.guesses += [(guess, response)]
-        print('Making guess: {}, Response: {}'.format(guess, response))
+        # print('Making guess: {}, Response: {}'.format(guess, response))
         return guess, response
 
     def test_possibility(self, possibility):
@@ -135,27 +135,30 @@ def single_test(code, num_colours=6, num_pegs=4, strategy=0, duplicates=True):
     print("Num Guesses: {}".format(len(m.guesses)))
 
 
-single_test([0, 0, 0, 6], num_colours=7, num_pegs=4, strategy=1)
+# single_test([0, 0, 0, 6], num_colours=7, num_pegs=4, strategy=1)
 
 
-def test_all_combinations(colours=6, pegs=4, duplicates=True):
+def test_all_combinations(colours=6, pegs=4, strategy=1, duplicates=True):
     all_secrets = product(range(colours), repeat=pegs) if duplicates else permutations(range(colours), pegs)
     guess_count = []
     for test_secret in all_secrets:
         s = Secret(test_secret)
-        m = Mastermind(s, colours, pegs, 0, duplicates)
+        m = Mastermind(s, colours, pegs, strategy, duplicates)
         m.run()
         num_guesses = len(m.guesses)
         guess_count += [num_guesses]
+        print("Num guesses: {}, Secret: {}".format(num_guesses, test_secret))
 
     dist = Counter(guess_count)
-    # av = 0
-    # for x, y in dist.items():
-    #     av += x * y
-    # av = av / sum(dist.values())
-    # print('Average: {}'.format(av))
 
     return dist
 
 
-# test_all_combinations(pegs=4, duplicates=True)
+my_dist = test_all_combinations(strategy=0)
+
+for num, count in my_dist.items():
+    print(num, count)
+
+# my_dist = test_all_combinations()
+#
+# pprint(my_dist)
