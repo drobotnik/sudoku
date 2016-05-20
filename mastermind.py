@@ -35,7 +35,8 @@ class Mastermind(object):
             assert num_pegs <= num_colours
         self.strategy = strategy
         self.secret = secret
-        self.possible_opts = product(range(num_colours), repeat=num_pegs) if duplicates else permutations(range(num_colours), num_pegs)
+        self.possible_opts = product(range(num_colours), repeat=num_pegs) if duplicates else permutations(
+            range(num_colours), num_pegs)
         self.num_colours = num_colours
         self.num_pegs = num_pegs
         self.guesses = []
@@ -68,8 +69,10 @@ class Mastermind(object):
         That is the score for that code.
         ie. If you got that response, how many different secrets would have given you that code
         """
-        test_checker = (check(code, test_guess) for code in self.remaining_opts)  # For each possible code, see what response you would get with the guess you are testing
-        group_responses = Counter(test_checker)  # Add up all the different possibilities. eg (0, 2): 50 means-> If you get a response of (0, 2), then it can only be one of 50 possibilites
+        test_checker = (check(code, test_guess) for code in
+                        self.remaining_opts)  # For each possible code, see what response you would get with the guess you are testing
+        group_responses = Counter(
+            test_checker)  # Add up all the different possibilities. eg (0, 2): 50 means-> If you get a response of (0, 2), then it can only be one of 50 possibilites
         wc = group_responses.values()  # We dont care about the different values since we don't know what it will, just how many times each option might appear
         return max(wc)  # We are only interested in the worst case
 
@@ -83,14 +86,16 @@ class Mastermind(object):
             last_guess, last_response = self.guesses[-1]
             filtered_codes = []
             for remaining_opt in self.remaining_opts:  # for each remaining possible code
-                if check(remaining_opt, last_guess) == last_response:  # Does that code match what we learnt from the last guess?
+                if check(remaining_opt,
+                         last_guess) == last_response:  # Does that code match what we learnt from the last guess?
                     filtered_codes += [remaining_opt]  # If so, add it to the new list of remaining possible codes
             self.remaining_opts = filtered_codes  # Set codes to only be the remaining possibilities
 
             if len(self.remaining_opts) == 1:
                 next_guess = self.remaining_opts[0]
             else:
-                next_guess = min(self.possible_opts, key=self.knuth_key)  # Find the code which would give you the most unambiguous response in the worst case
+                next_guess = min(self.possible_opts,
+                                 key=self.knuth_key)  # Find the code which would give you the most unambiguous response in the worst case
 
         else:
             next_guess = next(self.possible_opts)
@@ -121,9 +126,22 @@ class Secret(object):
 
 
 strategies = {
-    'naive': 0,
-    'knuth': 1,
-    'brute_force': 2
+    'naive': {'num': 0,
+              'results': {1: 1,
+                          2: 12,
+                          3: 71,
+                          4: 253,
+                          5: 588,
+                          6: 286,
+                          7: 78,
+                          8: 7}},
+    'knuth': {'num': 0,
+              'results': {1: 1,
+                          2: 6,
+                          3: 25,
+                          4: 239,
+                          5: 1025}},
+    'brute_force': {'num': 2}
 }
 
 
@@ -133,6 +151,7 @@ def single_test(code, num_colours=6, num_pegs=4, strategy=0, duplicates=True):
     m.run()
     # pprint(m.guesses)
     print("Num Guesses: {}".format(len(m.guesses)))
+    return m
 
 
 # single_test([0, 0, 0, 6], num_colours=7, num_pegs=4, strategy=1)
@@ -154,11 +173,20 @@ def test_all_combinations(colours=6, pegs=4, strategy=1, duplicates=True):
     return dist
 
 
-my_dist = test_all_combinations(strategy=0)
+# my_dist = test_all_combinations(strategy=2)
 
-for num, count in my_dist.items():
-    print(num, count)
+# for num, count in my_dist.items():
+#     print(num, count)
 
 # my_dist = test_all_combinations()
 #
 # pprint(my_dist)
+
+
+if __name__ == '__main__':
+    import timeit
+
+    print('EH?')
+    print(timeit.timeit("test_all_combinations(strategy=0)", setup="from __main__ import test_all_combinations",
+                        number=3))
+    print('What')
